@@ -25,21 +25,21 @@ const loader = new THREE.GLTFLoader();
 const draco  = new THREE.DRACOLoader();   // optional
 loader.setDRACOLoader(draco);
 
-// Load world
-loader.load('assets/world/world_model.glb', gltf => {
-  const world = gltf.scene;
-  world.traverse(n => {
-    if (n.isMesh) {
-      n.castShadow    = true;
-      n.receiveShadow = true;
-    }
-  });
-  scene.add(world);
-});
+// 🚫 Removed: Load world
+// loader.load('assets/world/world_model.glb', gltf => {
+//   const world = gltf.scene;
+//   world.traverse(n => {
+//     if (n.isMesh) {
+//       n.castShadow    = true;
+//       n.receiveShadow = true;
+//     }
+//   });
+//   scene.add(world);
+// });
 
-// Load helicopter
+// ✅ Load helicopter from GitHub
 let helicopter;
-loader.load('assets/models/helicopter/helicopter_model.glb', gltf => {
+loader.load('https://raw.githubusercontent.com/digi4arch424/helicopter-flight/main/assets/models/helicopter/helicopter_model.glb', gltf => {
   const hGroup = gltf.scene;
   hGroup.traverse(n => {
     if (n.isMesh) n.castShadow = true;
