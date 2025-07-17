@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>RC Helicopter Simulator</title>
+  <link rel="stylesheet" href="src/css/style.css"/>
+</head>
+<body>
+  <canvas id="renderCanvas"></canvas>
+
+  <!-- Stats / help overlay -->
+  <div id="ui">
+    <p id="info">WASD: move | Q/E: yaw | ↑↓: pitch | Space: throttle-up | Shift: throttle-down</p>
+  </div>
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.163.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.163.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
